@@ -1,21 +1,25 @@
-<!DOCTYPE html>
+<!-- Save as index.html and open in browser -->
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="./assets/SN.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
-    <title>Sheetal Naik | Frontend Developer | Portfolio</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project-First Portfolio — Sheetal Naik</title>
+
+  <!-- GSAP + ScrollTrigger (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <div class="wrap" role="main">
+  <div class="wrap" role="main">
     <header>
       <div class="brand" aria-label="Brand">
         <div class="logo">SN</div>
-        <div class="title">Sheetal — portfolio</div>
+        <div class="title">Sheetal Naik — portfolio</div>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
         <button class="toggle" id="themeToggle" aria-label="Toggle dark/light">☀️</button>
@@ -27,11 +31,12 @@
       <!-- tiles will be injected by JS -->
     </section>
 
+    <!-- contact section -->
     <div class="footer-sections" aria-hidden="false">
       <div class="card-min" id="contact">
         <h5>Contact</h5>
-        <p style="color:var(--muted);margin:6px 0 0">Email: <a href="mailto:sheetal@example.com"
-            style="color:var(--accent1);text-decoration:none">sheetal@example.com</a></p>
+        <p style="color:var(--muted);margin:6px 0 0">Email: <a href="mailto:sheetalnaik310@gmail.com"
+            style="color:var(--accent1);text-decoration:none">sheetalnaik310@gmail.com</a></p>
         <div style="margin-top:12px;display:flex;gap:10px">
           <a class="btn" href="#" aria-label="Link to github">GitHub</a>
           <a class="btn" href="#" aria-label="Link to live resume">Resume</a>
@@ -52,7 +57,7 @@
       <a id="codeLink" class="btn" href="#" target="_blank" rel="noopener">Source</a>
     </div>
   </aside>
-    <script src="script.js"></script>
+<script src="./script.js" ></script>
 </body>
-</html>
 
+</html>
