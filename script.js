@@ -1,34 +1,36 @@
 // Projects data - replace / extend with your own projects and images
 const projects = [
     { id: 'p1', 
-      title: 'Aurora UI Kit', 
-      role: 'Frontend, Motion', 
-      tech: ['HTML', 'CSS', 'GSAP'], 
-      thumbGradient: `url('../assets/ai-hoshino.png')`, 
-      desc: 'A micro-interaction driven UI-kit with accessible components and fluid transitions. Built to demonstrate motion-first design.', 
+      title: 'AI Resume Analyzer', 
+      role: 'Frontend, Backend integration', 
+      tech: ['React + Vite', 'React Router', 'Tailwind CSS', 'Zustand', 'Puter.js'], 
+      thumbGradient: `url('../assets/ai-resume-analyser.png')`, 
+      desc1: 'The AI Resume Analyzer is a web application built with Puter.js that leverages artificial intelligence to evaluate resumes and provide actionable feedback.', 
+      desc2: 'Users can upload their resumes and receive an analysis covering structure, skills, and overall presentation.',
       type: 'big', 
-      live: '#', 
-      source: '#' 
+      live: 'https://ai-resume-analyzer-xi-seven.vercel.app/', 
+      source: 'https://github.com/sheet848/ai-resume-analyzer' 
     },
     { id: 'p2', 
-      title: 'AI Resume Analyser', 
+      title: 'Video Annotation App', 
       role: 'Frontend', 
-      tech: ['JS', 'Canvas', 'Redux'], 
-      thumbGradient: `url('../assets/resume-analyser.png')`, 
-      desc: 'Tool for annotating and exporting timestamped notes — performance-focused and keyboard friendly.', 
+      tech: ['React + Vite', 'Redux', 'CSS'], 
+      thumbGradient: `url('../assets/video-annotate-app.png')`, 
+      desc1: 'The Video Annotation App is a web-based tool that allows users to interact with video content by adding annotations, highlights, and comments at specific timestamps. It is designed to enhance learning and content review by making videos more interactive and insightful.', 
       type: 'mini', 
-      live: '#', 
-      source: '#' 
+      live: 'https://github.com/sheet848/video-annotate', 
+      source: 'https://video-annotate.vercel.app/' 
     },
     { id: 'p3', 
       title: 'PhotoSnap Website', 
       role: 'Frontend, Design', 
-      tech: ['HTML', 'CSS', 'GSAP'], 
-      thumbGradient: `url('../assets/photosnap.png.png')`, 
-      desc: 'Prototype of a low-latency player UI with adaptive visuals and animated state transitions.', 
+      tech: ['React', 'React Router', 'SCSS'], 
+      thumbGradient: `url('../assets/photosnap.png')`, 
+      desc1: 'The Photosnap Website is a multi-page responsive web project. It focuses on creating a clean, modern photography platform where users can explore and showcase visual stories through engaging layouts.',
+      desc2: 'The site emphasizes responsive design and reusable components, ensuring that it delivers a seamless experience across desktop, tablet, and mobile devices.', 
       type: 'mini', 
-      live: '#', 
-      source: '#' 
+      live: 'https://photosnap-website-two.vercel.app/', 
+      source: 'https://github.com/sheet848/photosnap-website' 
     },
 ];
 
@@ -37,7 +39,8 @@ const details = document.getElementById('project-list');
 const panel = document.getElementById('panel');
 const panelThumb = document.getElementById('panelThumb');
 const panelTitle = document.getElementById('panelTitle');
-const panelDesc = document.getElementById('panelDesc');
+const panelDesc1 = document.getElementById('panelDesc1');
+const panelDesc2 = document.getElementById('panelDesc2');
 const panelTags = document.getElementById('panelTags');
 const liveLink = document.getElementById('liveLink');
 const codeLink = document.getElementById('codeLink');
@@ -67,7 +70,8 @@ projects.forEach((p, i) => {
 function openPanel(p) {
     panelThumb.style.background = p.thumbGradient;
     panelTitle.textContent = p.title;
-    panelDesc.textContent = p.desc;
+    panelDesc1.textContent = p.desc1;
+    panelDesc2.textContent = p.desc2;
     panelTags.innerHTML = p.tech.map(t => `<span class="tag">${t}</span>`).join('');
     liveLink.href = p.live;
     codeLink.href = p.source;
@@ -109,5 +113,5 @@ gsap.from('.logo', { scale: 0.9, opacity: 0.9, duration: 0.9, ease: 'elastic.out
 const btn = document.getElementById('themeToggle');
 btn.onclick = () => {
     document.body.classList.toggle('light');
-    btn.textContent = document.body.classList.contains('light') ? '🌙' : '☀️';
+    btn.textContent = document.body.classList.contains('light') ? '⚫️' : '⚪';
 };
