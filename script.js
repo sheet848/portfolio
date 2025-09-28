@@ -4,7 +4,8 @@ const projects = [
       title: 'AI Resume Analyzer', 
       role: 'Frontend, Backend integration', 
       tech: ['React + Vite', 'React Router', 'Tailwind CSS', 'Zustand', 'Puter.js'], 
-      thumbGradient: `url('../assets/ai-resume-analyser.png')`, 
+      thumbGradient: `url('../assets/cv-1.png')`,
+      thumbPanel: `../assets/cv-1.png`,
       desc1: 'The AI Resume Analyzer is a web application built with Puter.js that leverages artificial intelligence to evaluate resumes and provide actionable feedback.', 
       desc2: 'Users can upload their resumes and receive an analysis covering structure, skills, and overall presentation.',
       type: 'big', 
@@ -15,7 +16,8 @@ const projects = [
       title: 'Video Annotation App', 
       role: 'Frontend', 
       tech: ['React + Vite', 'Redux', 'CSS'], 
-      thumbGradient: `url('../assets/video-annotate-app.png')`, 
+      thumbGradient: `url('../assets/video-1.png')`,
+      thumbPanel: `../assets/video-1.png`,
       desc1: 'The Video Annotation App is a web-based tool that allows users to interact with video content by adding annotations, highlights, and comments at specific timestamps. It is designed to enhance learning and content review by making videos more interactive and insightful.', 
       type: 'mini', 
       live: 'https://github.com/sheet848/video-annotate', 
@@ -25,7 +27,8 @@ const projects = [
       title: 'PhotoSnap Website', 
       role: 'Frontend, Design', 
       tech: ['React', 'React Router', 'SCSS'], 
-      thumbGradient: `url('../assets/photosnap.png')`, 
+      thumbGradient: `url('../assets/travel.png')`,
+      thumbPanel: `../assets/travel.png`,
       desc1: 'The Photosnap Website is a multi-page responsive web project. It focuses on creating a clean, modern photography platform where users can explore and showcase visual stories through engaging layouts.',
       desc2: 'The site emphasizes responsive design and reusable components, ensuring that it delivers a seamless experience across desktop, tablet, and mobile devices.', 
       type: 'mini', 
@@ -68,7 +71,7 @@ projects.forEach((p, i) => {
 
 // Panel open/close
 function openPanel(p) {
-    panelThumb.style.background = p.thumbGradient;
+    panelThumb.src = p.thumbPanel;
     panelTitle.textContent = p.title;
     panelDesc1.textContent = p.desc1;
     panelDesc2.textContent = p.desc2;

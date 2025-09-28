@@ -191,10 +191,11 @@ nav a:hover::after {
 .thumb {
     position: absolute;
     inset: 0;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
     opacity: 1;
-    transform: scale(1.02);
+    transform: scale(0.90);
 }
 
 /* Projects list details (below hero) */
@@ -309,6 +310,13 @@ nav a:hover::after {
     background-size: cover;
     background-position: center;
     border: 1px solid rgba(255, 255, 255, 0.03)
+}
+
+.panel .hero-thumb img {
+    width: 40%;
+    display: flex;
+    display: block;
+    margin: auto;
 }
 
 .panel .links {
