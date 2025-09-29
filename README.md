@@ -1,6 +1,9 @@
-# Simple Instagram profile Portfolio
+# Simple Bento portfolio
 
 ### **Design Features:**
+- absolutely no frills whatsoever
+- shows the projects I will be displaying
+- Information for Contact
 
 - Instagram-style profile layout with circular profile pic, stats, and bio
 - Smooth animations and hover effects
@@ -22,3 +25,4 @@
 - Contact button ready for your email integration
 
 See to it
+That is it!! 
