@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SUSE Mono", sans-serif;
+    background: rgb(188, 220, 205);
+    color: darkslategray;
+}
+
+main {
+    margin: auto;
+    max-width: 800px;
+}
+
+.brand {
+    display: flex;
+}
+
+.acc-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.acc-title h3 {
+    color: green;
+}
+
+.acc-title h3:hover {
+    text-decoration: underline;
+}
+
+.acc-title .acc-buttons {
+    margin: 1em 0;
+}
+
+.acc-title .acc-buttons a,
+.links a {
+    font-weight: 700;
+    color: purple;
+}
+
+.links a {
+    gap: 10px;
+    display: inline-flex;
+}
+
+.acc-content {
+    /*display: none;*/
+    max-height: 0;           /* start collapsed */
+  overflow: hidden;        /* hide extra content */
+  opacity: 0;              /* optional fade */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  padding: 0 16px;         /* optional inner spacing */
+}
+
+.acc-content.active {
+    /*display: block;*/
+    max-height: 500px;       /* large enough for content */
+  opacity: 1;
+  padding: 12px 16px;      /* restore padding when open */
+}
+
+#resume  {
+    text-align: end;
+}
+
+#resume a {
+    color: darkslategray;
+}
